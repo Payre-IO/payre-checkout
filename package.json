@@ -1,0 +1,42 @@
+{
+  "name": "@payre/checkout",
+  "version": "1.0.0",
+  "description": "Payre Web3 Direct-to-Wallet Crypto Checkout Widget SDK",
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.cjs",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node -c index.js && node -c index.cjs && echo \"Syntax OK\""
+  },
+  "keywords": [
+    "web3",
+    "crypto",
+    "payment",
+    "gateway",
+    "checkout",
+    "widget",
+    "sdk",
+    "payre",
+    "solana",
+    "base",
+    "ethereum",
+    "polygon",
+    "usdt",
+    "usdc"
+  ],
+  "author": "PAYRE INFRA LTD (payre.io)",
+  "license": "MIT"
+}
