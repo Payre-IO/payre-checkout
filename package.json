@@ -2,6 +2,7 @@
   "name": "@payre/checkout",
   "version": "1.2.0",
   "description": "Payre Web3 Direct-to-Wallet Stablecoin Checkout Widget SDK (Base Only)",
+  "type": "module",
   "main": "./index.cjs",
   "module": "./index.js",
   "types": "./index.d.ts",
