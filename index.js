@@ -4,7 +4,7 @@
  * Universal, non-custodial crypto checkout modal and embedded iframe SDK.
  */
 
-export const version = '1.0.0';
+export const version = '1.2.0';
 
 /**
  * Creates and initializes a Payre Checkout instance.
@@ -170,19 +170,19 @@ export function createCheckout(invoiceIdOrOptions, maybeOptions = {}) {
       targetEl.appendChild(iframe);
     }
 
-    return {
+    const instance = {
       element: iframe,
       iframe,
       invoiceId,
       on: (event, callback) => {
         if (listeners[event]) listeners[event].push(callback);
-        return this;
+        return instance;
       },
       off: (event, callback) => {
         if (listeners[event]) {
           listeners[event] = listeners[event].filter(cb => cb !== callback);
         }
-        return this;
+        return instance;
       },
       close: () => {
         if (typeof window !== 'undefined') {
@@ -203,6 +203,7 @@ export function createCheckout(invoiceIdOrOptions, maybeOptions = {}) {
         emit('close');
       }
     };
+    return instance;
   }
 
   // ─── MODAL OVERLAY MODE ───────────────────────────────────────────────────

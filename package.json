@@ -1,7 +1,7 @@
 {
   "name": "@payre/checkout",
-  "version": "1.0.0",
-  "description": "Payre Web3 Direct-to-Wallet Crypto Checkout Widget SDK",
+  "version": "1.2.0",
+  "description": "Payre Web3 Direct-to-Wallet Stablecoin Checkout Widget SDK (Base Only)",
   "main": "./index.cjs",
   "module": "./index.js",
   "types": "./index.d.ts",
@@ -19,21 +19,19 @@
     "README.md"
   ],
   "scripts": {
-    "test": "node -c index.js && node -c index.cjs && echo \"Syntax OK\""
+    "test": "node test.cjs"
   },
   "keywords": [
     "web3",
     "crypto",
+    "stablecoin",
     "payment",
     "gateway",
     "checkout",
     "widget",
     "sdk",
     "payre",
-    "solana",
     "base",
-    "ethereum",
-    "polygon",
     "usdt",
     "usdc"
   ],
