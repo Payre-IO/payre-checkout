@@ -63,7 +63,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to NPM (if token present)
-        if: ${{ secrets.NPM_TOKEN != '' }}
+        if: secrets.NPM_TOKEN != ''
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
